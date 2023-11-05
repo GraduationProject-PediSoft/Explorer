@@ -17,8 +17,8 @@ public class ExplorerService {
     private static final String VALUE = "IA-MODEL";
 
     /**
-     *
-     * @return
+     * Filters the Registry for searching IA services in the system
+     * @return an iterable with the names of the IA Services
      */
     public Iterable<String> filterAlgorithms() {
         return this.discoveryClient.getServices()
