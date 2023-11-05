@@ -5,8 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.stereotype.Service;
 
-import java.util.LinkedList;
-import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Service
@@ -18,7 +16,10 @@ public class ExplorerService {
     private static final String KEY = "microservice-type";
     private static final String VALUE = "IA-MODEL";
 
-
+    /**
+     *
+     * @return
+     */
     public Iterable<String> filterAlgorithms() {
         return this.discoveryClient.getServices()
                 .stream()
