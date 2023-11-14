@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  explorer:
+    hostname: algorithm-explorer
+    build: .
+    networks:
+      - tesis
+    environment:
+      EUREKA_URL: ${EUREKA_URL}
+
+networks:
+  tesis:
+    driver: bridge
+    external: true

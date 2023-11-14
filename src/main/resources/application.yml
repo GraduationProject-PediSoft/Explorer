@@ -1,0 +1,11 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URL}
+    register-with-eureka: true
+  instance:
+    prefer-ip-address: true
+
+spring:
+  application:
+    name: algorithm-explorer
